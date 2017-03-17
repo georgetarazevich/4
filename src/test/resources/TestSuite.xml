@@ -1,16 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite" verbose="1" >
-    <!-- Параметр для ВСЕХ тестов в сьюьте -->
-    <parameter name="pathChromeDriver" value="src\test\resources\chromedriver.exe"/>
-    <parameter name="infoToFind" value="Специалист по тестированию"/>
-    
-    
-    <test name="Test With Classes">
-        <!-- Параметр для ДАННОГО теста -->
-        <parameter name="content" value="12345678"/>
-        <classes>
-            <class name="FileTest"/>
-            <class name="FileStorageTest"/>
-        </classes>
-    </test>
+<suite name="Suite" verbose="1">
+	<!-- Параметр для ВСЕХ тестов в сьюьте -->
+	<parameter name="pathChromeDriver" value="src\test\resources\chromedriver.exe" />
+
+	<test name="searchForVacanciesTest_True">
+		<!-- Параметр для ДАННОГО теста -->
+		<parameter name="infoToFind" value="Специалист по тестированию" />
+		<classes>
+			<class name="JobsTutByPageTests" />
+		</classes>
+	</test>
 </suite>
